@@ -1,0 +1,10 @@
+{
+    "name": "pccomponentes/codebreaker",
+    "type": "project",
+    "require": {},
+    "autoload": {
+      "psr-4": {
+        "PcComponentes\\Codebreaker\\": "src/"
+    }
+    }
+}
