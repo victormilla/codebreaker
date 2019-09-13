@@ -1,0 +1,13 @@
+{
+    "name": "victor/codebreaker-victor",
+    "authors": [
+        {
+            "name": "Victor Milla",
+            "email": "vitorino889@gmail.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {"Codebreaker\\": "src/"}
+    }
+}

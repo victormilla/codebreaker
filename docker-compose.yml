@@ -1,0 +1,29 @@
+version: '3'
+
+services:
+    app:
+        build: docker/app
+        hostname: codebreakerVictor
+        volumes:
+            - .:/var/www/codebreakerVictor
+
+            - ../public-uk-education-data:/var/www/public-uk-education-data
+
+            - ../symfony-demo:/var/www/symfony-demo
+
+            - ./docker/app/php.ini:/etc/php/7.3/fpm/conf.d/99-php.ini
+            - ./docker/app/php.ini:/etc/php/7.3/cli/conf.d/99-php.ini
+            - ./docker/app/sites:/etc/nginx/sites-enabled
+        ports:
+            - "80:80"
+        environment:
+            IS_DEVELOPMENT_ENVIRONMENT: 1
+            DEVELOPMENT_SECRET:         ~
+            BITBUCKET_CONSUMER_KEY:     ~
+            BITBUCKET_CONSUMER_SECRET:  ~
+            GITHUB_OAUTH_TOKEN:         ~
+            GIT_EMAIL:                  ~
+            GIT_USER:                   ~
+            XDEBUG_REMOTE_HOST:         ~
+            XDEBUG_REMOTE_PORT:         ~
+            REPOSITORY_NAME:            codebreakerVictor

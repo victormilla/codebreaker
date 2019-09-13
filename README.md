@@ -23,3 +23,6 @@ To test your implementation use this examples:
 | 1234 | 4256 | +- |
 | 3435 | 3445 | +++ |
 | 4342 | 1122 | +- |
+
+##How to play
+
